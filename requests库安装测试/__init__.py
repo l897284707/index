@@ -1,5 +1,4 @@
 import requests
-r=requests.get('http://www.baidu.com')
-print(r.status_code)
-print(r.text)
-print()
+response = requests.get('https://s1.hdslb.com/bfs/static/jinkela/video/asserts/33.png')
+with open('D:/Desktop/1.png','wb') as f:
+    f.write(response.content)
