@@ -1,9 +1,8 @@
-from lxml import html
-etree =html.etree
-source = '''
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>测试</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
     <div class="useful">
@@ -21,9 +20,3 @@ source = '''
     </div>
 </body>
 </html>
-'''
-selector=etree.HTML(source)
-useful=selector.xpath("//div[@class='useful']")
-#info_list=useful[0].xpath('ul/li/text()')
-info = selector.xpath('//div[@class="useful"]/ul/li/text()')
-print(info)
