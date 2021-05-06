@@ -24,6 +24,6 @@ source = '''
 '''
 selector=etree.HTML(source)
 useful=selector.xpath("//div[@class='useful']")
-#info_list=useful[0].xpath('ul/li/text()')
+#info_list=useful[0].xpath('ul/li/text()') starswith
 info = selector.xpath('//div[@class="useful"]/ul/li/text()')
 print(info)
